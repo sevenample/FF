@@ -1,0 +1,34 @@
+/* 範例3 用50Mhz振盪器來產生1秒鐘的clock，並做一個計數器每一秒做加1。 */
+module Gen1HzClk(
+        iClock50M,   /* 50 Mhz clock */
+        iRSt_n,      /* 重置訊號 低準位(0)動作 */
+
+        oClk1s       /* 1Hz pulse */
+);
+input              iClock50M;  /* 50 Mhz clock */
+input              iRSt_n;     /* 重置訊號 低準位(0)動作 */
+output             oClk1s;     /* 1Hz clock */
+
+parameter   CLOCKFREQ = 50_000_000; /* clock = 50Mhz*/
+parameter   ExpectClk = 1;  /* 1Hz */
+reg              rClk1Hz ;     /* 宣告 o1sPulse 為暫存器屬性 */
+reg    [31:0]    rDivCounter;
+
+/* 產生1Hz有正負半周的時脈 */
+assign oClk1s = rClk1Hz ;  /* 指定輸入iLed訊號給oLed訊號 */
+always@(posedge iClock50M or negedge iRSt_n) begin
+    if(!iRSt_n) begin /* 初始暫存器 */
+         rDivCounter<= 0; /* 計數器歸0 */
+         rClk1Hz <= 0; /* o1sPulse歸0 */
+    end else begin
+        if(rDivCounter >= ((CLOCKFREQ/(ExpectClk * 2)-1))) begin
+            rDivCounter<= 0; /* 計數器歸0 */ 
+            rClk1Hz <= ~rClk1Hz ;  /* 反向 */
+        end else begin
+            rDivCounter<= rDivCounter+ 1; /* 計數器歸0 */ 
+            rClk1Hz <= rClk1Hz ;  /* r1sPulse 保持訊號 */
+        end
+    end
+end
+
+endmodule

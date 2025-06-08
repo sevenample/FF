@@ -1,0 +1,125 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -2.501
+TNS   : -113.536
+
+Type  : Slow 1200mV 85C Model Setup 'Gen1HzClk:u3|rClk1Hz'
+Slack : -1.139
+TNS   : -5.324
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -2.179
+TNS   : -2.179
+
+Type  : Slow 1200mV 85C Model Hold 'Gen1HzClk:u3|rClk1Hz'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK_50'
+Slack : -0.823
+TNS   : -26.672
+
+Type  : Slow 1200mV 85C Model Recovery 'Gen1HzClk:u3|rClk1Hz'
+Slack : 0.082
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'Gen1HzClk:u3|rClk1Hz'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK_50'
+Slack : 1.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -62.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Gen1HzClk:u3|rClk1Hz'
+Slack : -1.000
+TNS   : -6.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -2.191
+TNS   : -97.521
+
+Type  : Slow 1200mV 0C Model Setup 'Gen1HzClk:u3|rClk1Hz'
+Slack : -0.912
+TNS   : -4.070
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -2.016
+TNS   : -2.016
+
+Type  : Slow 1200mV 0C Model Hold 'Gen1HzClk:u3|rClk1Hz'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : -0.620
+TNS   : -19.958
+
+Type  : Slow 1200mV 0C Model Recovery 'Gen1HzClk:u3|rClk1Hz'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'Gen1HzClk:u3|rClk1Hz'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 1.200
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -62.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Gen1HzClk:u3|rClk1Hz'
+Slack : -1.000
+TNS   : -6.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -0.921
+TNS   : -38.430
+
+Type  : Fast 1200mV 0C Model Setup 'Gen1HzClk:u3|rClk1Hz'
+Slack : -0.202
+TNS   : -0.715
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Fast 1200mV 0C Model Hold 'Gen1HzClk:u3|rClk1Hz'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : -0.070
+TNS   : -2.021
+
+Type  : Fast 1200mV 0C Model Recovery 'Gen1HzClk:u3|rClk1Hz'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'Gen1HzClk:u3|rClk1Hz'
+Slack : 0.126
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 0.739
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -78.994
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Gen1HzClk:u3|rClk1Hz'
+Slack : -1.000
+TNS   : -6.000
+
+------------------------------------------------------------

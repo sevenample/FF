@@ -1,0 +1,45 @@
+module countdown_timer (
+    input clk_1hz,
+    input rst_n,
+    output reg [1:0] state,      // 狀態輸出（RED、GREEN、YELLOW）
+    output reg [3:0] countdown   // 倒數值輸出
+);
+
+    parameter RED    = 2'd0;
+    parameter GREEN  = 2'd1;
+    parameter YELLOW = 2'd2;
+
+    parameter RED_COUNT    = 3;
+    parameter GREEN_COUNT  = 4;
+    parameter YELLOW_COUNT = 2;
+
+    reg [1:0] next_state;
+	
+    // 狀態轉移
+    always @(*) begin
+        case (state)
+            RED:    next_state = GREEN;
+            GREEN:  next_state = YELLOW;
+            YELLOW: next_state = RED;
+            default:next_state = RED;
+        endcase
+    end
+
+    // 狀態與倒數更新
+    always @(posedge clk_1hz or negedge rst_n) begin
+        if (!rst_n) begin
+            state <= RED;
+            countdown <= RED_COUNT;
+        end else if (countdown == 0) begin
+            state <= next_state;
+            case (next_state)
+                RED:    countdown <= RED_COUNT;
+                GREEN:  countdown <= GREEN_COUNT;
+                YELLOW: countdown <= YELLOW_COUNT;
+            endcase
+        end else begin
+            countdown <= countdown - 1;
+        end
+    end
+
+endmodule
